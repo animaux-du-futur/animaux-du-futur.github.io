@@ -43,10 +43,12 @@ header {
       display: block;
       height: 1em;
 
-      img {
+      .logo {
         position: absolute;
         bottom: 0;
         right: 0;
+        width: 100%;
+        text-align: center;
       }
     }
   }
