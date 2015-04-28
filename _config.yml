@@ -1,0 +1,13 @@
+# Site settings
+title: Les Animaux du Futur
+email: contact@animaux-du-futur.com
+description: >
+  Le futur. Les animaux.
+  Tout ça tout ça.
+baseurl: ""
+url: "http://animaux-du-futur.github.io" # the base hostname & protocol for your site
+twitter_username: ???
+github_username:  ???
+
+# Build settings
+markdown: kramdown
