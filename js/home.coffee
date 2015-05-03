@@ -1,0 +1,14 @@
+---
+---
+
+angular.module 'adf.home', [
+  'ng'
+]
+
+.controller 'randomArtController',
+($scope, $http) ->
+  $http.get 'https://api.github.com/repos/animaux-du-futur/animaux-du-futur.github.io/contents/img/home'
+  .then (response) ->
+    image = response.data[Math.floor response.data.length * Math.random()]
+    $scope.imageSrc = image.path
+    $scope.imageLegend = image.name
