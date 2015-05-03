@@ -10,6 +10,20 @@ html, body {
 
   section {
     flex: 1;
-    background: blue;
+    background: $brand-color;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    .legend {
+      position: absolute;
+      bottom: 2em;
+      left: 2em;
+      padding: 0.5em 1em;
+
+      @extend .heading;
+      background: $brand-color;
+      color: white;
+    }
   }
 }

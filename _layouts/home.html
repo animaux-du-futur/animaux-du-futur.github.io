@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="adf.home">
 
   {% include head.html %}
 
   <body class="home">
 
-    <section>
-
+    <section
+      ng-controller="randomArtController"
+      ng-style="{'background-image': 'url('+ imageSrc +')'}"
+    >
+      <p class="legend" ng-bind="imageLegend">
+      </p>
     </section>
 
     {% include header.html %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="js/home.js"></script>
   </body>
 
 </html>
