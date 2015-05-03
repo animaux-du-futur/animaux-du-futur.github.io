@@ -11,4 +11,4 @@ angular.module 'adf.home', [
   .then (response) ->
     image = response.data[Math.floor response.data.length * Math.random()]
     $scope.imageSrc = image.path
-    $scope.imageLegend = image.name
+    $scope.imageLegend = image.name.split('.')[0]
