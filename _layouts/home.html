@@ -5,17 +5,11 @@
 
   <body class="home">
 
-    <section
-      ng-controller="randomArtController"
-      ng-style="{'background-image': 'url('+ imageSrc +')'}"
-    >
-      <p class="legend" ng-bind="imageLegend">
-      </p>
-    </section>
+    {{ content }}
 
-    {% include header.html %}
+    {% include menu.html %}
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    {% include libs.html %}
     <script src="js/home.js"></script>
   </body>
 

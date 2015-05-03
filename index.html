@@ -2,6 +2,10 @@
 layout: home
 ---
 
-<pre>
-  Home
-</pre>
+<section
+  ng-controller="randomArtController"
+  ng-style="{'background-image': 'url('+ imageSrc +')'}"
+>
+  <p class="legend" ng-bind="imageLegend">
+  </p>
+</section>

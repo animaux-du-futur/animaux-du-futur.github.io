@@ -1,0 +1,41 @@
+.manifesto {
+
+  section > div {
+    background-size: cover;
+    background-position: center;
+    padding: 3em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @mixin manifesto-bg($i) {
+      &:nth-child(#{$i}) {
+        background-image: url(../img/manifesto/#{$i}.png)
+      }
+    }
+
+    @for $i from 1 through 4 {
+      @include manifesto-bg($i);
+    }
+
+    > article {
+      background-color: transparentize($brand-color, 0.5);
+      padding: 3em;
+      text-align: center;
+      max-width: 50em;
+      margin: 3em 0;
+
+      &.left {
+        align-self: flex-start;
+      }
+
+      &.right {
+        align-self: flex-end;
+      }
+
+      h2 {
+        font-size: larger;
+      }
+    }
+  }
+}
