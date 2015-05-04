@@ -3,7 +3,7 @@
   section > div {
     background-size: cover;
     background-position: center;
-    padding: 3em 0;
+    padding: 6em 12em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,10 +20,10 @@
 
     > article {
       background-color: transparentize($brand-color, 0.5);
-      padding: 3em;
+      padding: 2em;
       text-align: center;
-      max-width: 50em;
-      margin: 3em 0;
+      max-width: 40em;
+      margin: 3em 9em;
 
       &.left {
         align-self: flex-start;
