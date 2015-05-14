@@ -17,6 +17,8 @@ body {
   }
 
   .content {
+    width: 100%;
+
     > *:first-child {
       padding-top: $spacing-unit;
     }
