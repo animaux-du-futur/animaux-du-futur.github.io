@@ -1,9 +1,9 @@
 .manifesto {
 
-  section > div {
+  .content > div {
     background-size: cover;
     background-position: center;
-    padding: 6em 12em;
+    padding: 6em 3em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,10 +31,6 @@
 
       &.right {
         align-self: flex-end;
-      }
-
-      h2 {
-        font-size: larger;
       }
     }
   }
