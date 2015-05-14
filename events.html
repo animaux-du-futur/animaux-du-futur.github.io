@@ -3,27 +3,21 @@ class: events
 layout: page
 ---
 
+{% assign events = site.events | sort: 'date', 'last' %}
+{% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+
 <article class="coming">
   <h2>
     À venir
   </h2>
 
   <div class="event-list">
-    <div class="event">
-      <div class="image-block"  style="background: blue;"></div>
-      <div class="details">
-        <h3>Title</h3>
-        <div class="date">10/23/2340</div>
-      </div>
-    </div>
-
-    <div class="event">
-      <div class="image-block"  style="background: blue;"></div>
-      <div class="details">
-        <h3>Title</h3>
-        <div class="date">10/23/2340</div>
-      </div>
-    </div>
+    {% for event in events %}
+    {% capture event_date %}{{event.date | date: '%s'}}{% endcapture %}
+    {% if event_date > nowunix %}
+      {% include event.html event=event %}
+    {% endif %}
+    {% endfor %}
   </div>
 
 </article>
@@ -34,44 +28,17 @@ layout: page
   </h2>
 
   <div class="event-list">
+    {% for event in events %}
+    {% capture event_date %}{{event.date | date: '%s'}}{% endcapture %}
+    {% if event_date < nowunix %}
     <div class="event">
-      <div class="image-block"  style="background: blue;"></div>
+      <div class="image-block" style="background-image: url('img/events/{{ event.image }}');"></div>
       <div class="details">
-        <h3>Title</h3>
-        <div class="date">10/23/2340</div>
+        <h3>{{ event.name }}</h3>
+        <div class="date">{{ event.date | date: "%d/%m/%Y" }}</div>
       </div>
     </div>
-
-    <div class="event">
-      <div class="image-block"  style="background: blue;"></div>
-      <div class="details">
-        <h3>Title</h3>
-        <div class="date">10/23/2340</div>
-      </div>
-    </div>
-
-    <div class="event">
-      <div class="image-block"  style="background: blue;"></div>
-      <div class="details">
-        <h3>Title</h3>
-        <div class="date">10/23/2340</div>
-      </div>
-    </div>
-
-    <div class="event">
-      <div class="image-block"  style="background: blue;"></div>
-      <div class="details">
-        <h3>Title</h3>
-        <div class="date">10/23/2340</div>
-      </div>
-    </div>
-
-    <div class="event">
-      <div class="image-block"  style="background: blue;"></div>
-      <div class="details">
-        <h3>Title</h3>
-        <div class="date">10/23/2340</div>
-      </div>
-    </div>
+    {% endif %}
+    {% endfor %}
   </div>
 </article>
