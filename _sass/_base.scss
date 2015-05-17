@@ -111,6 +111,11 @@ a {
   }
 
   &:hover {
+    > .button:first-child {
+      background: $text-color;
+      color: $brand-color;
+    }
+
     .tuto {
       display: block;
     }
