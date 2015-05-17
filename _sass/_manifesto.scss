@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    // TODO add media queries
 
     @mixin manifesto-bg($i) {
       &:nth-child(#{$i}) {

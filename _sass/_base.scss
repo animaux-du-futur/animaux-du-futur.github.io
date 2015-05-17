@@ -82,3 +82,43 @@ a {
         text-decoration: none;
     }
 }
+
+.button {
+  @extend .heading;
+  letter-spacing: 3px;
+  word-break: break-all;
+  background: $brand-color;
+  color: $text-color;
+
+  &:hover {
+    background: $text-color;
+    color: $brand-color;
+  }
+}
+
+.hovered-tuto {
+  background: $brand-color;
+
+  .tuto {
+    display: none;
+
+    a {
+      text-decoration: underline;
+      &:hover {
+        color: $brand-color;
+      }
+    }
+  }
+
+  &:hover {
+    .tuto {
+      display: block;
+    }
+  }
+}
+
+.tuto {
+  padding: 2em;
+  background: $text-color;
+  color: $brand-color;
+}
