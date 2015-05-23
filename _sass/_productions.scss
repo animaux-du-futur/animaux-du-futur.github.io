@@ -1,4 +1,4 @@
-.events {
+.productions {
   > .content {
     text-align: center;
 
@@ -7,7 +7,7 @@
     }
   }
 
-  .event-list {
+  .production-list {
     display: flex;
     padding: 0 10%;
     margin-bottom: $spacing-unit;
@@ -15,7 +15,7 @@
     justify-content: center;
   }
 
-  .event {
+  .production {
     height: 20em;
     min-width: 20em;
     width: 30%;
@@ -54,7 +54,7 @@
   }
 
   .past {
-    .event {
+    .production {
       font-size: smaller;
       height: 15em;
       min-width: 15em;

@@ -1,0 +1,71 @@
+---
+class: productions
+layout: page
+---
+
+{% assign productions = site.productions | sort: 'date', 'last' %}
+{% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+
+<article class="coming">
+  <h2>
+    À venir
+  </h2>
+
+  <div class="production-list">
+    {% for production in productions %}
+    {% capture production_date %}{{production.date | date: '%s'}}{% endcapture %}
+    {% if production_date > nowunix %}
+      {% include production.html production=production %}
+    {% endif %}
+    {% endfor %}
+  </div>
+
+</article>
+
+<article class="past">
+  <h2>
+    Passés
+  </h2>
+
+  <div class="production-list">
+    {% for production in productions %}
+    {% capture production_date %}{{production.date | date: '%s'}}{% endcapture %}
+    {% if production_date < nowunix %}
+    <div class="production">
+      <div class="image-block" style="background-image: url('img/productions/{{ production.image }}');"></div>
+      <div class="details">
+        <h3>{{ production.name }}</h3>
+        <div class="date">{{ production.date | date: "%d/%m/%Y" }}</div>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</article>
+
+<article>
+  <div class="hovered-tuto">
+    <div class="button">
+      Ajouter une production
+    </div>
+
+    <div class="tuto">
+      <p>
+        Copier-coller le code ci-dessous et le compléter sur <a
+          href="https://github.com/animaux-du-futur/animaux-du-futur.github.io/new/master/_productions?filename=new-production.md"
+          target="_blank"
+        >cette page</a> :
+      </p>
+      <pre>
+        <code>
+---
+name: À compléter
+image: fichier.png
+date: 2015-06-01
+---
+        </code>
+      </pre>
+    </div>
+
+  </div>
+</article>
