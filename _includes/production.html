@@ -1,7 +1,7 @@
-<div class="productions">
-  <div class="image-block" style="background-image: url('img/productions/{{ productions.image }}');"></div>
+<div class="production">
+  <div class="image-block" style="background-image: url('img/productions/{{ production.image }}');"></div>
   <div class="details">
-    <h3>{{ productions.name }}</h3>
-    <div class="date">{{ productions.date | date: "%d/%m/%Y" }}</div>
+    <h3>{{ production.name }}</h3>
+    <div class="date">{{ production.date | date: "%d/%m/%Y" }}</div>
   </div>
 </div>
