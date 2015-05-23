@@ -11,8 +11,9 @@ layout: page
     Prochains événements
   </h2>
 
+  {% assign productions = site.productions | sort: 'date' %}
   <div class="production-list">
-    {% for production in productions %}
+    {% for production in productions reversed %}
     {% capture production_date %}{{production.date | date: '%s'}}{% endcapture %}
     {% if production_date > nowunix %}
       {% include production.html production=production %}
@@ -28,16 +29,10 @@ layout: page
   </h2>
 
   <div class="production-list">
-    {% for production in productions %}
+    {% for production in productions reversed%}
     {% capture production_date %}{{production.date | date: '%s'}}{% endcapture %}
     {% if production_date < nowunix %}
-    <div class="production">
-      <div class="image-block" style="background-image: url('img/productions/{{ production.image }}');"></div>
-      <div class="details">
-        <h3>{{ production.name }}</h3>
-        <div class="date">{{ production.date | date: "%d/%m/%Y" }}</div>
-      </div>
-    </div>
+      {% include production.html production=production %}
     {% endif %}
     {% endfor %}
   </div>
