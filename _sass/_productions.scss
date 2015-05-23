@@ -28,15 +28,33 @@
     justify-content: stretch;
 
     transition: box-shadow 1s;
-
     cursor: pointer;
-    &:hover, &:focus, &:active {
-      box-shadow: 0px 0px 0px 5px $grey-color-light;
-    }
 
     .image-block {
       background-size: cover;
       flex: 1;
+      display: flex;
+      justify-content: stretch;
+
+      .description {
+        flex: 1;
+        background-color: transparentize($brand-color, 0.5);
+        color: $text-color;
+        display: flex;
+        overflow-x: hidden;
+        overflow-y: auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+    }
+
+    &:hover {
+      .description {
+        opacity: 1;
+      }
     }
 
     .details {
