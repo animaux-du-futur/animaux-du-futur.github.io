@@ -5,7 +5,13 @@
     </div>
   </div>
   <div class="details">
-    <h3>{{ production.name }}</h3>
+    <h3>
+      <img
+        class="icon"
+        src="img/icons/{{ production.type }}.svg"
+      >&nbsp;
+      {{ production.name }}
+    </h3>
     <div class="date">{{ production.date | date: "%d/%m/%Y" }}</div>
   </div>
 </div>
