@@ -11,7 +11,7 @@
 
     @mixin manifesto-bg($i) {
       &:nth-child(#{$i}) {
-        background-image: url(../img/manifesto/#{$i}.png)
+        background-image: url(../img/manifesto/#{$i}.jpg)
       }
     }
 
