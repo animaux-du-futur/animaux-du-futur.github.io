@@ -1,0 +1,48 @@
+---
+class: productions
+layout: page
+---
+
+{% assign productions = site.productions | sort: 'date', 'last' %}
+{% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+
+<article class="coming">
+  <h2>
+    Prochains événements
+  </h2>
+
+  {% assign productions = site.productions | sort: 'date' %}
+  <div class="production-list">
+    {% for production in productions reversed %}
+    {% capture production_date %}{{production.date | date: '%s'}}{% endcapture %}
+    {% if production_date > nowunix %}
+      {% include production.html production=production %}
+    {% endif %}
+    {% endfor %}
+  </div>
+
+</article>
+
+<article class="past">
+  <h2>
+    Productions et évenements passés
+  </h2>
+
+  <div class="production-list">
+    {% for production in productions reversed%}
+    {% capture production_date %}{{production.date | date: '%s'}}{% endcapture %}
+    {% if production_date < nowunix %}
+      {% include production.html production=production %}
+    {% endif %}
+    {% endfor %}
+  </div>
+</article>
+
+<article>
+    <a
+      class="button"
+      href="https://github.com/animaux-du-futur/animaux-du-futur.github.io/wiki/Productions"
+    >
+      Gérer les productions
+    </a>
+</article>

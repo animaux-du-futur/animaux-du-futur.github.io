@@ -1,0 +1,17 @@
+<div class="production {{ production.type }}">
+  <div class="image-block" style="background-image: url('img/productions/{{ production.image }}');">
+    <div class="description">
+      {{ production.content }}
+    </div>
+  </div>
+  <div class="details">
+    <h3>
+      <img
+        class="icon"
+        src="img/icons/{{ production.type }}.svg"
+      >&nbsp;
+      {{ production.name }}
+    </h3>
+    <div class="date">{{ production.date | date: "%d/%m/%Y" }}</div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+.impressum {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  padding: 0.2em 0.5em;
+  background: transparentize($brand-color, 0.5);
+  z-index: 3;
+
+  a {
+    @extend .heading;
+    color: $text-color;
+    padding: 0 1em;
+    border-right: 1px solid $text-color;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  .contact {
+    cursor: pointer;
+
+    .hidden {
+      display: inline-block;
+      width: 0;
+      vertical-align: bottom;
+      transition: all 1s;
+      white-space: nowrap;
+      overflow: hidden;
+      color: transparentize($text-color, 0.2);
+    }
+
+    &:hover, &:active, &:focus {
+      .hidden {
+        width: 250px;
+        padding-left: 1em;
+      }
+    }
+  }
+}

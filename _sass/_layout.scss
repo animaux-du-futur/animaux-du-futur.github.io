@@ -15,4 +15,17 @@ body {
     position: relative;
     overflow: auto;
   }
+
+  .content {
+    width: 100%;
+
+    > *:first-child {
+      padding-top: $spacing-unit;
+    }
+
+    > *:last-child {
+      padding-bottom: 6em;
+    }
+  }
+
 }

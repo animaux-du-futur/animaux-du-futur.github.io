@@ -1,12 +1,13 @@
 .manifesto {
 
-  section > div {
+  .content > div {
     background-size: cover;
     background-position: center;
-    padding: 6em 12em;
+    padding: 6em 3em;
     display: flex;
     flex-direction: column;
     align-items: center;
+    // TODO add media queries
 
     @mixin manifesto-bg($i) {
       &:nth-child(#{$i}) {
@@ -19,7 +20,7 @@
     }
 
     > article {
-      background-color: transparentize($brand-color, 0.5);
+      background-color: transparentize($brand-color, 0.2);
       padding: 2em;
       text-align: center;
       max-width: 40em;
@@ -31,10 +32,6 @@
 
       &.right {
         align-self: flex-end;
-      }
-
-      h2 {
-        font-size: larger;
       }
     }
   }

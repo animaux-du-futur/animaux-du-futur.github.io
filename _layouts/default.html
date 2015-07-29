@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html ng-app={{ page.app }}>
 
   {% include head.html %}
 
   <body class="{{ page.class }}">
+    {% include impressum.html %}
 
-    <section>
-      {{ content }}
-    </section>
+    {{ content }}
 
     {% include menu.html %}
+
+    {% include libs.html %}
+    {% for script in page.scripts %}
+    <script src="js/{{ script }}"></script>
+    {% endfor %}
   </body>
 
 </html>
