@@ -1,53 +1,43 @@
 header {
-
   > nav {
     display: flex;
     flex-direction: row;
     align-items: center;
     text-align: center;
-
     height: 5em;
     background: white;
-
     .nav-group {
       flex: 2;
       display: flex;
       align-items: center;
-
       > a {
         flex: 1;
         margin: 0 7px;
-
         @extend .heading;
         letter-spacing: 3px;
         word-break: break-all;
-
         &:hover {
           background: $brand-color;
           color: white;
         }
       }
-
       .separator {
         height: 1em;
         width: 1px;
         background-color: $brand-color;
       }
     }
-
     .site-title {
       flex: 2;
       position: relative;
       display: block;
       height: 1em;
-
       .logo {
         position: absolute;
         bottom: 0;
         right: 0;
         width: 100%;
         text-align: center;
-
         img {
           max-height: 100px;
         }
