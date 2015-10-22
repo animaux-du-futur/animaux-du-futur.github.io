@@ -17,13 +17,14 @@ $brand-color2: white;
 $background-color: $brand-color;
 $text-color: white;
 
-
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 $on-palm:          600px;
 $on-laptop:        800px;
+
+$padding-top-pages: 100px;
 
 // Using media queries with like this:
 // @include media-query($palm) {

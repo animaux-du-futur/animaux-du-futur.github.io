@@ -42,6 +42,7 @@ body {
   text-transform: uppercase;
   font-size: $base-font-size;
   font-weight: bold;
+  text-decoration: none;
 }
 h1,
 h2,
@@ -90,34 +91,45 @@ img {
  * Links
  */
 a {
-  color: $brand-color;
-  text-decoration: none;
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
-  &:hover {
-    color: $text-color;
-    text-decoration: none;
-  }
-}
-.button {
-  @extend .heading;
-  letter-spacing: 3px;
-  word-break: break-all;
-  background: $brand-color2;
+  text-decoration: underline;
   color: $text-color;
+
   &:hover {
-    background: $brand-color2;
     color: $brand-color;
   }
 }
-a {
-  text-decoration: underline;
+
+.button,
+a.button {
+  @extend .heading;
+  letter-spacing: 3px;
+  word-break: break-all;
+  text-decoration: none;
+
   &:hover {
     background: $text-color;
     color: $brand-color;
   }
+
+  &.inverted {
+    background: $brand-color2;
+    color: $text-color;
+
+    &:hover {
+      background: $brand-color2;
+      color: $brand-color;
+    }
+  }
+
+  &.big {
+    padding: 10px 15px;
+
+    &::before {
+      content: '⇀'
+    }
+  }
 }
+
 .icon {
   height: 1.2em;
   fill: $text-color;
