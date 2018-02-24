@@ -12,7 +12,3 @@ angular.module 'adf.home', [
     image = response.data[Math.floor response.data.length * Math.random()]
     $scope.imageSrc = window.encodeURIComponent image.path
     $scope.imageLegend = image.name.split('.')[0]
-
-function myFunction() {
-    location.reload();
-}
