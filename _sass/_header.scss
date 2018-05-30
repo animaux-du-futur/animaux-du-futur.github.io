@@ -74,6 +74,7 @@ header {
   width: 30px;;
   padding: 7px 7px 7px 15px;
   position: relative;
+  color: black;
 }
 article.instructions {
   visibility: hidden;
@@ -82,6 +83,6 @@ article.instructions {
   visibility: visible;
 }
 .aide:hover {
-  background-color: var(--highlight1);
-  color: var(--white);
+  background-color: black;
+  color: white;
 }
