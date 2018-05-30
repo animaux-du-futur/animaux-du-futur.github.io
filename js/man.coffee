@@ -1,7 +1,7 @@
 ---
 ---
 
-angular.module 'adf.home', [
+angular.module 'adf.man', [
   'ng'
 ]
 
