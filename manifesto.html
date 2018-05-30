@@ -2,30 +2,21 @@
 class: manifesto
 layout: page
 ---
-
-<div>
-  <article>
-    <h2>
-      Bonjour! Nous sommes les animaux du futur.
-    </h2>
-    <p>
-      Les Animaux du Futur est un collectif  d’artistes et de techniciens qui s’expriment par  la musique, la
-vidéo et l’illustration, dans un esprit de cadavre exquis où chacun peut participer..
+<section
+  ng-controller="randomArtController"
+  ng-style="{'background-image': 'url('+ imageSrc +')'}"
+>
+<article class="instructions">
+  <h2>
+    Bonjour! Nous sommes les animaux du futur.
+  </h2>
+  <p>
+    Les Animaux du Futur est un collectif  d’artistes et de techniciens qui s’expriment par  la musique, la
+vidéo et l’illustration, dans un esprit de cadavre exquis où chacun peut participer.<br>
 Depuis 2013, ils rapprochent les humains dans des contextes festifs variés, avec l’objectif de
-réveiller leur curiosité.
+réveiller leur curiosité.<br>
 Leurs installations sont pensées comme de gros jouets, qui se pratiquent seul ou à plusieurs. Il
 paraît qu’ils peuvent décupler le pouvoir de création et de célébration de tout un chacun réunis.
-    </p>
-  </article>
-</div>
-
-<div>
-  <article>
-    <h2>
-      Contactez- nous !
-    </h2>
-    <p>
-      animauxdufutur@gmail.com
-    </p>
-  </article>
-</div>
+  </p>
+</article>
+</section>
