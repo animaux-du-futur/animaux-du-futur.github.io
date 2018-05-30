@@ -1,4 +1,11 @@
 .manifesto {
+  section {
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;align-items: center;
+  }
   article {
     width: 40vw;
     display: flex;
@@ -17,7 +24,7 @@
     text-align: justify;
   }
 
-  .content > div {
+  /*.content > div {
     background-size: cover;
     background-position: center;
     padding: 6em 3em;
@@ -51,5 +58,5 @@
         align-self: flex-end;
       }
     }
-  }
+  }*/
 }
