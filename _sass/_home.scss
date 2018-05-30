@@ -36,4 +36,10 @@
       text-align: justify;
     }
   }
+  article.instructions {
+    visibility: hidden;
+  }
+  .aide:hover article.instructions {
+    visibility: visible;
+  }
 }

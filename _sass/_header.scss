@@ -78,12 +78,6 @@ header {
 .aide h2 {
   color: black;
 }
-article.instructions {
-  visibility: hidden;
-}
-.aide:hover article.instructions {
-  visibility: visible;
-}
 .aide:hover {
   background-color: black;
 }
