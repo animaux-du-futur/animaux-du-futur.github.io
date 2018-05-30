@@ -24,7 +24,16 @@
       flex-direction: column;
       justify-content: center;
       height: auto;
-      background-color: rgba(100, 100, 100, 0.7);
-      padding: 30px;}
+      background-color: black;
+      padding: 30px;
+    }
+    p {
+      font-size: 17px;
+      text-align: justify;
+    }
+    h2 {
+      font-size: 23px;
+      text-align: justify;
+    }
   }
 }
