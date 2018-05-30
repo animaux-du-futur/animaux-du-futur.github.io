@@ -69,3 +69,19 @@ header {
     }
   }
 }
+
+.aide {
+  width: 30px;;
+  padding: 7px 7px 7px 15px;
+  position: relative;
+}
+.aide article.instructions {
+  visibility: hidden;
+}
+.aide:hover article.instructions {
+  visibility: visible;
+}
+.aide:hover {
+  background-color: var(--highlight1);
+  color: var(--white);
+}
