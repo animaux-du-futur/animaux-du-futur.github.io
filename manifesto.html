@@ -2,7 +2,10 @@
 class: manifesto
 layout: page
 ---
-
+<section
+  ng-controller="randomArtController"
+  ng-style="{'background-image': 'url('+ imageSrc +')'}"
+>
 <article class="instructions">
   <h2>
     Bonjour! Nous sommes les animaux du futur.
@@ -16,3 +19,4 @@ Leurs installations sont pensées comme de gros jouets, qui se pratiquent seul o
 paraît qu’ils peuvent décupler le pouvoir de création et de célébration de tout un chacun réunis.
   </p>
 </article>
+</section>
