@@ -40,7 +40,7 @@
     }
     p.reload {
       position: absolute;
-      bottom: 2em;
+      bottom: 1em;
       left: 2em;
       padding: 0.5em 1em;
       cursor: crosshair;
@@ -55,10 +55,8 @@ a.reload:hover {
   background-color: white;
 }
 p.reload {
-  font-size: 12px;
+  font-size: 11px;
   color: red;
-  text-transform: uppercase;
-  font-weight: bold;
   text-decoration: none;
 }
 a.reload:hover p {
