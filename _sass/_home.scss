@@ -51,14 +51,18 @@
     }
   }
 }
-a.reload:hover {
+p.reload:hover, section:hover p.reload {
   background-color: white;
+  color: red;
 }
 p.reload {
   font-size: 11px;
-  color: red;
+  font-weight: 200;
   text-decoration: none;
+  text-transform: none;
 }
-a.reload:hover p {
+ {
 color: black;
+background-color: white;
+color: red;
 }
