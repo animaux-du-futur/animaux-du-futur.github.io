@@ -42,7 +42,7 @@
       right: 2em;
       padding: 0.5em 1em;
       cursor: crosshair;
-      
+
       @extend .heading;
       background: $brand-color;
       color: white;
@@ -50,7 +50,7 @@
   }
 }
 a.reload:hover {
-  color: red;
+  background-color: white;
 }
 a.reload p {
   font-size: 12px;
@@ -58,4 +58,7 @@ a.reload p {
   text-transform: uppercase;
   font-weight: bold;
   text-decoration: none;
+}
+a.reload:hover p {
+color: black;
 }
