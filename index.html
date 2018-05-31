@@ -4,21 +4,17 @@ class: home
 scripts: ['home.js']
 app: adf.home
 ---
-
-<section
-  ng-controller="randomArtController"
-  ng-style="{'background-image': 'url('+ imageSrc +')'}"
->
 <script>
 function reload() {
     location.reload();
 }
 </script>
-
-  <a class="reload" onclick="reload()" style="cursor: pointer">
-    <p style="margin:0px;">(charger un nouveau visuel)</p>
-  </a>
+<section onclick="reload()"
+  ng-controller="randomArtController"
+  ng-style="{'background-image': 'url('+ imageSrc +')'}"
+>
 
   <p class="legend" ng-bind="imageLegend">
+  <br><p style="font-weight:200;">(changez d'image en cliquand dans le fond)</p>
   </p>
 </section>
