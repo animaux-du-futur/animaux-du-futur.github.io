@@ -36,5 +36,15 @@
       background: $brand-color;
       color: white;
     }
+    a.reload {
+      position: absolute;
+      bottom: 3.5em;
+      right: 2em;
+      padding: 0.5em 1em;
+
+      @extend .heading;
+      background: $brand-color;
+      color: white;
+    }
   }
 }

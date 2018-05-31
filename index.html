@@ -9,6 +9,16 @@ app: adf.home
   ng-controller="randomArtController"
   ng-style="{'background-image': 'url('+ imageSrc +')'}"
 >
+<script>
+function reload() {
+    location.reload();
+}
+</script>
+
+  <a class="reload" onclick="reload()" style="cursor: pointer">
+    <p>(charger un nouveau visuel)</p>
+  </a>
+
   <p class="legend" ng-bind="imageLegend">
   </p>
 </section>
